@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metatags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta tags PWA -->
+    <meta name="theme-color" content="#333333" />
+
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Title -->
+    <title>React CDN</title>
+
+    <!-- Scripts -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./icon-project.png" type="image/x-icon" />
+
+    <link
+      rel="apple-touch-icon"
+      href="./icon-project.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="./icon-project.png"
+      type="image/x-icon"
+    />
+
+    <!-- Manifest - Configura el nombre de la aplicación -->
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel" src="./components/Contador.js"></script>
+    <script type="text/babel" src="./index.js"></script>
+
+    <script src="./register.js"></script>
+    <!-- <script type="text/babel">
+      // const Interpolar = () => {
+      //   const [numero, setNumero] = React.useState(0);
+      //   console.log(numero);
+      // setInterval(() => {
+      //   setNumero(numero + 1);
+      // }, 1500);
+      // const nombre = prompt("Cual es tu nombre");
+      // return (
+      //El uso de parentesis de vez de las llavez omite el uso del 'return'
+      // Sin embargo esto genera problemas al momento de usar dinamismo
+      //     <div>
+      //       <h1>Fecha: {numero}</h1>
+      //       <hr />
+      //     </div>
+      //   );
+      // };
+
+      // ReactDOM.render(<Interpolar />, document.getElementById("root"));
+      // const Saludo = () => {
+      //   // Componente, estructura que conserva una sola logica.
+      //   return (
+      //     (<h1>Hola Mundo - Tryhard Mode</h1>),
+      //     (
+      //       <ol>
+      //         <li>Casa</li>
+      //         <li>Perro</li>
+      //         <li>Loro</li>
+      //         <li>Su tio</li>
+      //       </ol>
+      //     )
+      //   );
+      // };
+      // ReactDOM.render(
+      // React.createElement(
+      // <Saludo />, // La creacion de nuestras propias etiquetas que contienen codigo
+      // document.getElementById("root")
+      //   "ol",
+      //   null,
+      //   React.createElement("li", null, "CocaCola"),
+      //   React.createElement("li", null, "Pepsi"),
+      //   React.createElement("li", null, "Poker") //El uso de JSX es para evitar la creacion repetitiva de codigo para crear por ejemplo listas
+      //), //Renderisamiento de elementos
+      // ReactDOM es realmente un DOM virtual, no se crea codigo fuente, haciendo que la generacion y la carga sea menos pesada
+      //);
+    </script> -->
+  </body>
+</html>
